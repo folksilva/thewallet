@@ -1,0 +1,13 @@
+.balance {
+    border-radius: 8px;
+}
+.balance .symbol {
+    float: left;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.balance .value {
+    font-size: 3rem;
+    line-height: 3rem;
+    text-align: right;
+}

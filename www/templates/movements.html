@@ -1,0 +1,28 @@
+<ion-view title="{{ movementsTitle }}">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button menu-toggle="right" class="button button-icon icon ion-help-circled"></button>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header">
+
+        <ion-list can-swipe="true">
+            <div class="item item-divider">{{ today }}</div>
+            <ion-item class="item-text-wrap" ng-repeat="movement in movements">
+                <ion-option-button class="button-assertive" ng-click="remove(movement)">
+                    <i class="icon ion-trash-a"></i>
+                </ion-option-button>
+                {{ movement.text }}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+    <ion-footer-bar class="bar-stable item-input-inset">
+        <div class="item-input-wrapper">
+            <input type="text" rows="3" placeholder="{{ movementLabel }}" autofocus required>
+        </div>
+        <button class="button button-clear icon ion-plus-round"></button>
+    </ion-footer-bar>
+</ion-view>

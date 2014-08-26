@@ -1,0 +1,412 @@
+{
+  "project": {
+    "projectSettingsVersion": "1.1",
+    "creationData": {
+      "type": "Blank Project",
+      "createDefaultBuildConfigs": true,
+      "projectTypeName": "com.intel.xdk.projecttype.jsapp",
+      "src": "blankproject",
+      "sourceDirectory": "www",
+      "projectGuid": "73bc97ec-b92e-4856-bf93-f7a3beea6544",
+      "lastModifiedDate": 1409062739328,
+      "creationDate": 1409060595295
+    },
+    "sourceDirectory": "www",
+    "cordovaPluginsDirectory": "plugins",
+    "startFile": "index.html",
+    "projectFiles": {},
+    "projectDirectories": {},
+    "libraries": [
+      {
+        "name": "Cordova",
+        "version": "2.9.0",
+        "data": {
+          "default": true
+        }
+      },
+      {
+        "name": "intelXDK",
+        "version": "4.0.0",
+        "data": {
+          "default": true
+        }
+      }
+    ],
+    "cordovaPlugins": [
+      {
+        "id": "org.apache.cordova.device-motion",
+        "version": "0.2.4",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.camera",
+        "version": "0.2.9",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.media-capture",
+        "version": "0.2.8",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.device-orientation",
+        "version": "0.3.6",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.network-information",
+        "version": "0.2.8",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.contacts",
+        "version": "0.2.8",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.device",
+        "version": "0.2.5",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.battery-status",
+        "version": "0.2.5",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.file",
+        "version": "0.2.5",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.geolocation",
+        "version": "0.3.5",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.globalization",
+        "version": "0.2.7",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.inappbrowser",
+        "version": "0.3.0",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.media",
+        "version": "0.2.8",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.dialogs",
+        "version": "0.2.5",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.vibration",
+        "version": "0.3.5",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "org.apache.cordova.splashscreen",
+        "version": "0.2.5",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.accelerometer",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.audio",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.base",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.cache",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.camera",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.contacts",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.device",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.display",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.facebook",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.file",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.geolocation",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.notification",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      },
+      {
+        "id": "intel.xdk.player",
+        "selectedState": "Auto",
+        "data": {},
+        "paramvals": {}
+      }
+    ],
+    "serviceMethods": [],
+    "buildConfigurations": {
+      "Android": {
+        "platform_": "android",
+        "name_": "Android",
+        "preferences_": {
+          "android-installLocation": "auto"
+        },
+        "isActive_": true,
+        "appName_": "The Wallet",
+        "appID_": "br.com.folksilva.thewallet",
+        "appAccess_": "*",
+        "icons_": [
+          {
+            "relPath": "img/icon36.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
+          },
+          {
+            "relPath": "img/icon48.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "img/icon72.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          },
+          {
+            "relPath": "img/icon96.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          }
+        ],
+        "splashes_": [],
+        "iosProvs_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "cordovaCLIVersion_": "3.3",
+        "crosswalkVersion_": "stable",
+        "appVersion_": "1.0.0",
+        "runtime_": "Cordova 3.x",
+        "appDescription_": "Simple wallet app to manage your money",
+        "appAuthor_": "Luiz Fernando da Silva <folksilva@gmail.com>"
+      },
+      "Android-Crosswalk": {
+        "platform_": "android",
+        "name_": "Android-Crosswalk",
+        "preferences_": {},
+        "isActive_": true,
+        "appName_": "thewallet",
+        "appID_": "not.yet.specified",
+        "appAccess_": "*",
+        "icons_": [
+          {
+            "relPath": "img/icon36.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
+          },
+          {
+            "relPath": "img/icon48.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "img/icon72.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          },
+          {
+            "relPath": "img/icon96.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          }
+        ],
+        "splashes_": [],
+        "iosProvs_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "cordovaCLIVersion_": "3.3",
+        "crosswalkVersion_": "stable",
+        "appVersion_": "1.0.0",
+        "runtime_": "Crosswalk with Cordova 3.x"
+      },
+      "iOS": {
+        "platform_": "ios",
+        "name_": "iOS",
+        "preferences_": {},
+        "isActive_": true,
+        "appName_": "thewallet",
+        "appID_": "not.yet.specified",
+        "appAccess_": "*",
+        "icons_": [
+          {
+            "relPath": "img/icon120.png",
+            "height": 120,
+            "width": 120
+          },
+          {
+            "relPath": "img/icon60.png",
+            "height": 60,
+            "width": 60
+          },
+          {
+            "relPath": "img/icon152.png",
+            "height": 152,
+            "width": 152
+          },
+          {
+            "relPath": "img/icon76.png",
+            "height": 76,
+            "width": 76
+          }
+        ],
+        "splashes_": [],
+        "iosProvs_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "cordovaCLIVersion_": "3.3",
+        "crosswalkVersion_": "stable",
+        "appVersion_": "1.0.0",
+        "runtime_": "Cordova 3.x"
+      },
+      "Windows8": {
+        "platform_": "windows8",
+        "name_": "Windows8",
+        "preferences_": {},
+        "isActive_": true,
+        "appName_": "thewallet",
+        "appID_": "not.yet.specified",
+        "appAccess_": "*",
+        "icons_": [
+          {
+            "relPath": "img/icon30.png",
+            "height": 30,
+            "width": 30
+          },
+          {
+            "relPath": "img/icon50.png",
+            "height": 50,
+            "width": 50
+          },
+          {
+            "relPath": "img/icon150.png",
+            "height": 150,
+            "width": 150
+          }
+        ],
+        "splashes_": [],
+        "iosProvs_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "cordovaCLIVersion_": "3.3",
+        "crosswalkVersion_": "stable",
+        "appVersion_": "1.0.0.0",
+        "runtime_": "Cordova 3.x"
+      },
+      "WindowsPhone8": {
+        "platform_": "wp8",
+        "name_": "WindowsPhone8",
+        "preferences_": {},
+        "isActive_": true,
+        "appName_": "thewallet",
+        "appID_": "not.yet.specified",
+        "appAccess_": "*",
+        "icons_": [],
+        "splashes_": [],
+        "iosProvs_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "cordovaCLIVersion_": "3.3",
+        "crosswalkVersion_": "stable",
+        "appVersion_": "1.0.0.0",
+        "runtime_": "Cordova 3.x"
+      }
+    }
+  }
+}
