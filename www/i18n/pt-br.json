@@ -1,0 +1,16 @@
+{
+    "accountsTitle": "Contas",
+    "tagsTitle": "Tags",
+    "movementsTitle": "Movimentações",
+    "movementLabel": "+10,00 #tag1 #tag2 @conta",
+    "today": "Hoje",
+    "yesterday": "Ontem",
+    "dayAgo": "dia atrás",
+    "daysAgo": "dias atrás",
+    "weekAgo": "semana atrás",
+    "weeksAgo": "semanas atrás",
+    "monthAgo": "mês atrás",
+    "monthsAgo": "meses atrás",
+    "yearAgo": "ano atrás",
+    "yearsAgo": "anos atrás"
+}

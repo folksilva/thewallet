@@ -19,10 +19,12 @@
         </ion-list>
     </ion-content>
 
+    <form ng-submit="add()" name="addForm">
     <ion-footer-bar class="bar-stable item-input-inset">
         <div class="item-input-wrapper">
-            <input type="text" rows="3" placeholder="{{ movementLabel }}" autofocus required>
+            <input ng-model="addText" type="text" rows="3" placeholder="{{ movementLabel }}" autofocus required>
         </div>
-        <button class="button button-clear icon ion-plus-round"></button>
+        <button ng-disabled="!addForm.$disabled" class="button button-clear icon ion-plus-round"></button>
     </ion-footer-bar>
+    </form>
 </ion-view>

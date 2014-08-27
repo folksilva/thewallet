@@ -1,6 +1,10 @@
 "use strict";
 
-var app = angular.module('theWallet', ['ionic', 'theWallet.controllers']);
+var app = angular.module('theWallet', ['ionic', 'theWallet.services', 'theWallet.controllers']);
+
+app.run(function(DB) {
+    DB.init();
+});
 
 app.config(function($stateProvider, $urlRouterProvider) {
     var st = $stateProvider.state;

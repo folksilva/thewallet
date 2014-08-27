@@ -14,9 +14,8 @@
         <ion-content class="has-header dark-bg">
             <div class="card balance" menu-close>
                 <div class="item item-text-wrap stable-bg">
-                    <div class="symbol">{{ moneySymbol }}</div>
                     <div class="value" ng-class="{'assertive': balance <= 0}">
-                        {{ balance | number:2 }}
+                        {{ balance | currency }}
                     </div>
                 </div>
             </div>
@@ -25,16 +24,14 @@
                 <ion-item class="item-text-wrap item-dark" ng-repeat="account in accounts" menu-close>
                     {{ account.name }}
                     <span class="item-note">
-                        {{ moneySymbol }}
-                        {{ account.balance | number:2 }}
+                        {{ account.balance | currency }}
                     </span>
                 </ion-item>
                 <div class="item item-dark item-divider" menu-close>{{ tagsTitle }}</div>
                 <ion-item class="item-text-wrap item-dark" ng-repeat="tag in tags" menu-close>
                     {{ tag.name }}
                     <span class="item-note">
-                        {{ moneySymbol }}
-                        {{ tag.balance | number:2 }}
+                        {{ tag.balance | currency }}
                     </span>
                 </ion-item>
             </ion-list>
