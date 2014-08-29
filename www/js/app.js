@@ -1,6 +1,6 @@
 "use strict";
 
-var app = angular.module('theWallet', ['ionic', 'theWallet.services', 'theWallet.controllers']);
+var app = angular.module('theWallet', ['ionic', 'ngLocale', 'theWallet.services', 'theWallet.controllers']);
 
 app.run(function(DB) {
     DB.init();

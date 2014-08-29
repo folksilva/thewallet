@@ -54,8 +54,54 @@ srv.factory('DB', function ($q, DB_CONFIG) {
     return self;
 });
 // Resource service example
-srv.factory('Movement', function (DB) {
+srv.factory('Movement', ['DB', '$locale', function (DB, $locale) {
     var self = this;
+
+    self.new = function (srcText) {
+        var i, value = 0, tags = [], accounts = [], text = srcText.replace($locale.NUMBER_FORMATS.DECIMAL_SEP, '.');
+        var words = text.split(' ');
+        for (i = 0; i < words.length; i += 1) {
+            if(!isNaN(Number(words[i])) && !value) {
+                if (words[i].charAt(0) === '+') {
+                    value = Number(words[i]);
+                } else {
+                    value = Number(words[i]) * -1;
+                }
+            } else if (words[i].charAt(0) === '#') {
+                tags.push(words[i]);
+            } else if (words[i].charAt(0) === '@') {
+                accounts.push(words[i]);
+            }
+        }
+        if (value) {
+            return {
+                date: new Date(),
+                text: srcText,
+                value: value,
+                tags: tags.length > 0 ? tags.join(',') : '',
+                accounts: accounts.length > 0 ? accounts.join(',') : ''
+            };
+        }
+    };
+
+    self.load = function (raw) {
+        var tags = [], accounts = [];
+        if (raw.tags.length > 0) {
+            tags = raw.tags.split(',');
+        }
+        if (raw.accounts.length > 0) {
+            accounts = raw.accounts.split(',');
+        }
+        return {
+            id: raw.id,
+            date: new Date(raw.date),
+            text: raw.text,
+            value: raw.value,
+            tags: tags,
+            accounts: accounts
+        };
+    };
+
     self.all = function () {
         return DB.query('SELECT * FROM movements')
             .then(function (result) {
@@ -68,5 +114,15 @@ srv.factory('Movement', function (DB) {
                 return DB.fetch(result);
             });
     };
+
+    self.create = function (data) {
+       return DB.query(
+           'INSERT INTO movements (date, text, value, tags, accounts) VALUES (?, ?, ?, ?, ?)',
+           [data.date.toISOString(), data.text, data.value, data.tags, data.accounts]
+       ).then(function (result) {
+               return result;
+           });
+    };
+
     return self;
-});
+}]);
