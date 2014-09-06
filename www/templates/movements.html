@@ -1,6 +1,7 @@
-<ion-view title="{{ movementsTitle }}">
+<ion-view title="{{ getTitle() }}">
     <ion-nav-buttons side="left">
-        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+        <button ng-if="!filterTerm" menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+        <button ng-if="filterTerm" class="button button-icon icon ion-ios7-arrow-back" ng-click="clearFilter()"></button>
     </ion-nav-buttons>
     <ion-nav-buttons side="right">
         <button menu-toggle="right" class="button button-icon icon ion-help-circled"></button>
@@ -9,14 +10,18 @@
     <ion-content class="has-header">
 
         <ion-list can-swipe="true">
-            <div class="item item-divider">{{ today }}</div>
-            <ion-item class="item-text-wrap" ng-repeat="movement in movements">
+            <div class="item item-divider" ng-repeat-start="d in days | filter: filterDays | orderBy: '-day'">{{ d.day | date:'longDate' }}</div>
+            <ion-item class="item-text-wrap" ng-repeat-end ng-repeat="movement in movements | filter: filterMovs(d.day) | orderBy: 'date'">
                 <ion-option-button class="button-assertive" ng-click="remove(movement)">
                     <i class="icon ion-trash-a"></i>
                 </ion-option-button>
+                <span class="item-note text-right">
+                    {{ movement.date | date:'shortTime' }}
+                </span>
                 {{ movement.text }}
             </ion-item>
         </ion-list>
+
     </ion-content>
 
     <form ng-submit="add()" name="addForm">
@@ -24,7 +29,7 @@
         <div class="item-input-wrapper">
             <input ng-model="addText" type="text" rows="3" placeholder="{{ movementLabel }}" autofocus required>
         </div>
-        <button ng-disabled="!addForm.$disabled" class="button button-clear icon ion-plus-round"></button>
+        <button type="submit" ng-disabled="!addForm.$valid" class="button button-clear icon ion-plus-round"></button>
     </ion-footer-bar>
     </form>
 </ion-view>

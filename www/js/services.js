@@ -53,7 +53,8 @@ srv.factory('DB', function ($q, DB_CONFIG) {
 
     return self;
 });
-// Resource service example
+
+// Movimento
 srv.factory('Movement', ['DB', '$locale', function (DB, $locale) {
     var self = this;
 
@@ -122,6 +123,10 @@ srv.factory('Movement', ['DB', '$locale', function (DB, $locale) {
        ).then(function (result) {
                return result;
            });
+    };
+
+    self.remove = function (id) {
+        return DB.query('DELETE FROM movements WHERE id = ?', [id]).then(function (r) { return r; });
     };
 
     return self;
